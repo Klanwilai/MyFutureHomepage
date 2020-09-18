@@ -1,60 +1,65 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    <section class="logo">
+      <h1>TISS</h1>
+    </section>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
-  data () {
+  name: "app",
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
-}
+      msg: "Welcome to Your Vue.js App",
+    };
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body {
+  margin: 0;
+  background-color: black;
+}
+
+h1 {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: gold;
+  /* border: white 2px solid; */
 }
 
-h1, h2 {
-  font-weight: normal;
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: white;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+.logo {
+  position: absolute;
+  top: 20%;
+  left: 45%;
+  z-index: 1;
+  margin: auto;
+  animation: logo 9s ease-out 9s;
+  opacity: 0;
 }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+@keyframes logo {
+  0% {
+    width: 18em;
+    transform: scale(0.1);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    width: 18em;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.75);
+    width: 18em;
+  }
 }
 </style>
