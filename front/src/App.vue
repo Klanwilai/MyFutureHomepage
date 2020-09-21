@@ -1,24 +1,21 @@
 <template>
   <div id="app">
-    <section class="logo">
-      <h1>TISS</h1>
-    </section>
+    <blogBody></blogBody>
   </div>
 </template>
 
 <script>
+import Blog from "./pages/Blog.vue";
+
 export default {
-  name: "app",
-  data() {
-    return {
-      msg: "Welcome to Your Vue.js App",
-    };
-  },
+  components: {
+    blogBody: Blog
+  }
 };
 </script>
 
 <style>
-body {
+* {
   margin: 0;
   background-color: black;
 }
@@ -26,10 +23,9 @@ body {
 h1 {
   text-align: center;
   color: gold;
-  /* border: white 2px solid; */
 }
 
-.star {
+/* .star {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -49,7 +45,7 @@ h1 {
 @keyframes logo {
   0% {
     width: 18em;
-    transform: scale(0.1);
+    transform: scale(2.75);
     opacity: 1;
   }
   50% {
@@ -58,8 +54,8 @@ h1 {
   }
   100% {
     opacity: 0;
-    transform: scale(2.75);
+    transform: scale(0.1);
     width: 18em;
   }
-}
+} */
 </style>

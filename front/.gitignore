@@ -3,6 +3,7 @@ node_modules/
 dist/
 npm-debug.log
 yarn-error.log
+init-mongo.js
 
 # Editor directories and files
 .idea
