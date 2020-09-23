@@ -1,61 +1,26 @@
 <template>
-  <div id="app">
-    <blogBody></blogBody>
-  </div>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
-import Blog from "./pages/Blog.vue";
+import HelloWorld from './components/HelloWorld.vue'
 
 export default {
+  name: 'App',
   components: {
-    blogBody: Blog
+    HelloWorld
   }
-};
+}
 </script>
 
 <style>
-* {
-  margin: 0;
-  background-color: black;
-}
-
-h1 {
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: gold;
+  color: #2c3e50;
+  margin-top: 60px;
 }
-
-/* .star {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  background-color: white;
-}
-
-.logo {
-  position: absolute;
-  top: 20%;
-  left: 45%;
-  z-index: 1;
-  margin: auto;
-  animation: logo 9s ease-out 9s;
-  opacity: 0;
-}
-
-@keyframes logo {
-  0% {
-    width: 18em;
-    transform: scale(2.75);
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-    width: 18em;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.1);
-    width: 18em;
-  }
-} */
 </style>
