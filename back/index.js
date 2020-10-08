@@ -2,9 +2,12 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 // const multer = require("multer");
-const { connection } = require("./db");
+const {
+  connection
+} = require("./db");
 
 const blogRoutes = require("./routes/blogRoutes");
+const doodleRoutes = require("./routes/doodleRoutes");
 
 const app = express();
 /* ------------------------------------------------------------------------------------------------------------------------*/
@@ -40,6 +43,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/blog", blogRoutes);
+app.use("/doodles", doodleRoutes);
 
 app.use((error, req, res, next) => {
   console.log(error);
